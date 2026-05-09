@@ -1,0 +1,49 @@
+/*
+Theme Name: Rentify Child
+Theme URI: https://solaridev.com/rentify
+Description: Child theme de Hello Elementor para Rentify.
+Author: Gabriel Solari - SolariDev
+Author URI: https://solaridev.com
+Template: hello-elementor
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: rentify-child
+*/
+
+/* Ocultar títulos automáticos de Hello Elementor */
+.entry-title,
+.elementor-page-title,
+.elementor-heading-title {
+    display: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Ocultar el título global de Hello Elementor */
+.site-title {
+    display: none !important;
+}
+
+/* Centrar contenido principal de la plantilla Rentify Base */
+.rentify-base {
+    text-align: center;
+}
+
+/* Centrar imágenes y logos dentro del contenido de Rentify Base */
+.rentify-base img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Bloques de contenido */
+.rentify-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

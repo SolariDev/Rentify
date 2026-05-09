@@ -1,0 +1,59 @@
+# Ignorar todo por defecto
+*
+
+# Incluir solo plugins y themes
+!plugins/
+!themes/
+
+# Dentro de plugins, solo Rentify
+plugins/*
+!index.php
+!plugins/rentify/
+!plugins/rentify/**
+
+# Dentro de themes, solo Rentify Child
+themes/*
+!index.php
+!themes/theme-rentify-child/
+!themes/theme-rentify-child/**
+
+# Archivos institucionales permitidos
+!README.md
+!.gitignore
+!docker-compose.yml
+!.env.example
+
+# Ignorar subidas de medios y cachés
+uploads/
+cache/
+upgrade/
+languages/
+themes/*/languages/
+
+# Datos de Docker
+db_data/
+logs/
+
+# Archivos sensibles y de configuración
+.env
+debug.log
+
+# Archivos temporales y de sistema
+*.log
+*.tmp
+*.bak
+*.swp
+*.sql
+*.tar
+*.zip
+*~
+.DS_Store
+Thumbs.db
+
+# Configuraciones locales de IDE/editores
+.vscode/
+.idea/
+
+# Dependencias y librerías externas
+node_modules/
+vendor/

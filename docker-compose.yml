@@ -1,0 +1,36 @@
+services:
+  wordpress:
+    container_name: rentify_wordpress
+    image: wordpress:6.9.4-php8.2-apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./plugins:/var/www/html/wp-content/plugins
+      - ./themes:/var/www/html/wp-content/themes
+    environment:
+      WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
+      WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
+
+  db:
+    container_name: rentify_db
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+      MYSQL_DATABASE: ${WORDPRESS_DB_NAME}
+    volumes:
+      - db_data:/var/lib/mysql
+
+  phpmyadmin:
+    container_name: rentify_phpmyadmin
+    image: phpmyadmin:5.2.1
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: db
+      PMA_USER: ${WORDPRESS_DB_USER}
+      PMA_PASSWORD: ${WORDPRESS_DB_PASSWORD}
+
+volumes:
+  db_data:
