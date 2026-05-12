@@ -38,4 +38,12 @@ add_shortcode('rfy_inicio', function () {
 	include RENTIFY_PATH . 'app/views/inicio.php';
 	return ob_get_clean();
 });
+
+add_shortcode('rfy_registro', function () {
+    ob_start();
+    require_once RENTIFY_PATH . 'app/controllers/registro-controller.php';
+    RegistroController::procesar();
+    include RENTIFY_PATH . 'app/views/registro.php';
+    return ob_get_clean();
+});
 ?>

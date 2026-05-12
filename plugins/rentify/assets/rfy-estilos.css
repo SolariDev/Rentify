@@ -1,40 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
-
-/* ==========================
-   Paleta institucional
-   ========================== */
-:root {
-    --rfy-azul: #005f8d;
-    --rfy-verde: #4CAF50;
-    --rfy-gris: #333333;
-    --rfy-gris-claro: #f5f5f5;
-}
-
-/* ==========================
-   Ajustes globales
-   ========================== */
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
-/* Header de Hello Elementor */
-header,
-.site-header {
-    display: none !important;
-}
-
-.site-main {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
-
-/* ==========================
-   Páginas principales sin scroll
-   ========================== */
-body.rfy-noscroll {
-    overflow-y: hidden;
-}
-
 /* ==========================
    Inicio
    ========================== */
@@ -71,19 +34,28 @@ body.rfy-noscroll {
     max-width: 360px;
 }
 
-/* Botones link con animación */
+/* Botón base */
+.rfy-btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 25px; /* redondeado */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 12px 24px;
+}
+
+/* Variante inicio con animación */
 .rfy-botones-centrados .grupo-botones .rfy-btn {
     flex: 1;
     text-align: center;
     background: transparent;
-    border: none;
     color: var(--rfy-azul) !important;
     text-decoration: underline;
     font-weight: 500;
-    transition: all 0.4s ease;
-    padding: 12px 20px;
     position: relative;
     overflow: hidden;
+    box-shadow: none;
 }
 
 .rfy-botones-centrados .grupo-botones .rfy-btn::before {
@@ -92,25 +64,22 @@ body.rfy-noscroll {
     top: 0; left: 0;
     width: 100%;
     height: 0%;
-    background: radial-gradient(circle at center, rgba(0, 95, 141, 0.9) 0%, rgba(0, 95, 141, 0.7) 40%, rgba(0, 95, 141, 0.5) 100%);
+    background: radial-gradient(circle at center,
+        rgba(0, 95, 141, 0.9) 0%,
+        rgba(0, 95, 141, 0.7) 40%,
+        rgba(0, 95, 141, 0.5) 100%);
     transition: height 0.4s ease;
     z-index: -1;
+    border-radius: 25px;
 }
 
 .rfy-botones-centrados .grupo-botones .rfy-btn:hover {
     color: #fff !important;
-    text-decoration: none;    
+    text-decoration: none;
 }
 
 .rfy-botones-centrados .grupo-botones .rfy-btn:hover::before {
     height: 100%;
-    animation: bubbleGlow 0.8s ease forwards;
-}
-
-@keyframes bubbleGlow {
-    0% { filter: brightness(1); }
-    50% { filter: brightness(1.4); }
-    100% { filter: brightness(1); }
 }
 
 /* Logo Gaia Synapse institucional */
@@ -119,4 +88,152 @@ body.rfy-noscroll {
     opacity: 0.8;
     display: block;
     margin-top: 15px;
+}
+
+/* ==========================
+   REGISTRO DE USUARIO
+   ========================== */
+.rfy-registro {
+    text-align: center;
+    padding: 20px;
+}
+
+.rfy-registro .rfy-logo {
+    max-width: 100px;
+}
+
+.rfy-registro .rfy-titulo {
+    color: var(--rfy-azul);
+    font-weight: 500;
+    font-size:22px;
+    margin-bottom: 20px;
+}
+
+/* Botón institucional de registro */
+
+.rfy-btn-registro {
+    position: relative;
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+    background: var(--rfy-azul) !important;
+    color: #fff !important;
+    font-weight: 600;
+    border: none !important;
+    outline: none;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    z-index: 1;
+    text-decoration: none;
+}
+
+.rfy-btn-registro::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 0%;
+    background: radial-gradient(circle at center,
+        rgba(255,255,255,0.9) 0%,
+        rgba(255,255,255,0.7) 40%,
+        rgba(255,255,255,0.5) 100%);
+    transition: height 0.4s ease;
+    z-index: -1;
+    border-radius: 25px;
+}
+
+.rfy-btn-registro:hover {
+    color: #fff !important;
+    background: var(--rfy-azul) !important;
+}
+
+.rfy-btn-registro:hover::before {
+    height: 100%;
+}
+
+.rfy-enlace-ingreso {
+    color: var(--rfy-azul);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.rfy-enlace-ingreso:hover {
+    text-decoration: underline;
+}
+
+/* Campos en doble columna */
+.rfy-doble {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.rfy-doble-item {
+    flex: 1;
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.rfy-doble-item label {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.rfy-doble-item input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+/* Campos en columna única */
+.rfy-campo {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 16px auto;
+    text-align: left;
+}
+
+.rfy-campo label {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.rfy-campo input,
+.rfy-campo select {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Feedback */
+.rfy-exito {
+    color: var(--rfy-verde);
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.rfy-error {
+    color: red;
+    font-weight: 600;
+    margin: 20px 0;
 }
