@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Rentify
-Description: Aplicación para la gestión de contratos de alquiler.
+Description: Aplicación para la gestión de contratos de alquiler de propiedades inmuebles.
 Version: 1.0.0
 Author: Gabriel Solari
 License: GPL2
@@ -44,6 +44,19 @@ add_shortcode('rfy_registro', function () {
     require_once RENTIFY_PATH . 'app/controllers/registro-controller.php';
     RegistroController::procesar();
     include RENTIFY_PATH . 'app/views/registro.php';
+    return ob_get_clean();
+});
+
+add_shortcode('rfy_ingresar', function () {
+    ob_start();
+    include RENTIFY_PATH . 'app/views/ingresar.php';
+    return ob_get_clean();
+});
+
+add_shortcode('rfy_panel', function () {
+    ob_start();
+    require_once RENTIFY_PATH . 'app/controllers/panel-controller.php';
+    include RENTIFY_PATH . 'app/views/panel.php';
     return ob_get_clean();
 });
 ?>

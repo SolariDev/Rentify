@@ -70,7 +70,6 @@ body.rfy-noscroll {
     margin: 0 auto;
 }
 
-
 /* Bloques de contenido */
 .rentify-card {
     border: 1px solid #ddd;
@@ -78,4 +77,92 @@ body.rfy-noscroll {
     border-radius: 6px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rfy-link {
+    color: var(--rfy-azul);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.rfy-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================
+   Botones institucionales
+   ========================== */
+
+/* Botón base institucional */
+.rfy-btn {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    border: none !important;
+    outline: none !important;
+    border-radius: 25px;
+    cursor: pointer;
+    padding: 12px 24px;
+    text-align: center;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: underline !important;
+    background: transparent !important;
+    color: var(--rfy-azul) !important;
+}
+
+/* Animación base: expansión desde arriba */
+.rfy-btn::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 0%;
+    background: radial-gradient(circle at center,
+        rgba(0, 95, 141, 0.9) 0%,
+        rgba(0, 95, 141, 0.7) 40%,
+        rgba(0, 95, 141, 0.5) 100%);
+    transition: height 0.4s ease;
+    z-index: -1;
+    border-radius: 25px;
+}
+
+.rfy-btn:hover {
+    color: #fff !important;
+    text-decoration: underline !important;
+}
+
+.rfy-btn:hover::before {
+    height: 100%;
+}
+
+/* Variante REGISTRO: colores invertidos */
+.rfy-btn-registro {
+    background: var(--rfy-azul) !important;
+    color: #fff !important;
+    border: none !important;
+    outline: none !important;
+    border-radius: 25px;
+    text-decoration: underline !important;
+}
+
+.rfy-btn-registro::before {
+    background: radial-gradient(circle at center,
+        rgba(255,255,255,0.9) 0%,
+        rgba(255,255,255,0.7) 40%,
+        rgba(255,255,255,0.5) 100%);
+}
+
+.rfy-btn-registro:hover {
+    color: var(--rfy-azul) !important;
+    background: #fff !important;
+    text-decoration: underline !important;
+}
+
+.rfy-btn-registro:focus,
+.rfy-btn-registro:active {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }

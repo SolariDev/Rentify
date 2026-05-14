@@ -17,8 +17,8 @@ defined('ABSPATH') || exit;
 
   <!-- Misión institucional -->
   <p class="rfy-intro">
-    <strong>Rentify</strong> es un producto de <strong>Gaia Synapse</strong><br>
-    conectando soluciones para la organización.
+    <strong>Rentify</strong> es un producto de <strong>Gaia Synapse</strong>.<br>
+    Conectando soluciones para la organización.
   </p>
 
   <!-- Botones de acción -->

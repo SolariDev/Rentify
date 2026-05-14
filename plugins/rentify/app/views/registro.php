@@ -34,10 +34,10 @@ defined('ABSPATH') || exit;
             <input type="password" id="password" name="password" required autocomplete="new-password">
         </div>
 
-        <button type="submit" class="rfy-btn-registro">Registrate</button>
+        <button type="submit" class="rfy-btn rfy-btn-registro">Registrate</button>
     </form>
 
     <div class="rfy-link">
-        <a href="<?php echo home_url('/ingresar'); ?>" class="rfy-enlace-ingreso">¿Ya tenés cuenta? Inicia sesión</a>
+        <a href="<?php echo esc_url(home_url('/ingresar')); ?>" class="rfy-link">¿Ya tenés cuenta? Inicia sesión</a>
     </div>
 </div>
