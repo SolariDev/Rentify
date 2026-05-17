@@ -2,8 +2,6 @@
 defined('ABSPATH') || exit;
 ?>
 
-<!-- shortcode: [rfy_ingresar] -->
-
 <div class="rfy-ingreso">
     <div class="rfy-logo">
         <img src="<?php echo plugins_url('assets/img/logoct.png', dirname(__FILE__, 2)); ?>" alt="Logo Rentify" />

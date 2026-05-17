@@ -2,8 +2,6 @@
 defined('ABSPATH') || exit;
 ?>
 
-<!-- shortcode: [rfy_registro] -->
-
 <div class="rfy-registro rfy-noscroll">
 
     <?php

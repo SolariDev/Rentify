@@ -8,7 +8,7 @@ $nombre_apellido = '';
 
 if ($id_usuario > 0) {
     global $wpdb;
-    $tabla = $wpdb->prefix . 'rfy_usuarios';
+    $tabla = $wpdb->prefix . 'rentify_usuarios';
     $usuario = $wpdb->get_row(
         $wpdb->prepare("SELECT nombre, apellido FROM $tabla WHERE id_usuario = %d", $id_usuario)
     );

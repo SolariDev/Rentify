@@ -2,8 +2,6 @@
 defined('ABSPATH') || exit;
 ?>
 
-<!-- shortcode: [rfy_inicio] -->
-
 <div class="rfy-botones-centrados rfy-noscroll">
   
   <?php

@@ -49,6 +49,7 @@ add_shortcode('rfy_registro', function () {
 
 add_shortcode('rfy_ingresar', function () {
     ob_start();
+    require_once RENTIFY_PATH . 'app/controllers/ingresar-controller.php';
     include RENTIFY_PATH . 'app/views/ingresar.php';
     return ob_get_clean();
 });
@@ -57,6 +58,13 @@ add_shortcode('rfy_panel', function () {
     ob_start();
     require_once RENTIFY_PATH . 'app/controllers/panel-controller.php';
     include RENTIFY_PATH . 'app/views/panel.php';
+    return ob_get_clean();
+});
+
+add_shortcode('rfy_nuevocontrato', function () {
+    ob_start();
+    require_once RENTIFY_PATH . 'app/controllers/nuevo-contrato-controller.php';
+    include RENTIFY_PATH . 'app/views/nuevocontrato.php';
     return ob_get_clean();
 });
 ?>
