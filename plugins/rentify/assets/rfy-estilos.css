@@ -262,6 +262,11 @@
     margin-bottom: 20px;
 }
 
+/* Aire entre Teléfono y Mail en Propietario/Inquilino */
+.rfy-form fieldset input[type="email"] {
+  margin-top: 12px;
+}
+
 .rfy-form legend {
     font-weight: 600;
     color: var(--rfy-azul);
@@ -345,4 +350,192 @@
 .rfy-boton-guardar .rfy-btn {
     min-width: 200px;
     text-align: center;
+}
+
+/* =======================
+   Historial de Contratos 
+   ======================= */
+
+.rfy-historial {
+  max-width: 960px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.rfy-historial h2 {
+  text-align: center;
+  color: var(--rfy-azul);
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.rfy-historial-search {
+  margin: 16px auto;
+  text-align: center;
+}
+
+/* Formulario de búsqueda */
+.rfy-historial-search form{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+}
+
+.rfy-historial-search input[type="text"] {
+  padding: 6px 10px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botón de acción primaria: Buscar contrato */
+.rfy-historial-search button.rfy-btn {
+  text-decoration: none !important;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 0;        
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+    
+.rfy-historial-search .rfy-btn {
+  padding: 6px 12px;
+  background: var(--rfy-azul);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Tabla de contratos */
+.rfy-historial-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: -45px !important;
+  font-size: 14px;
+}
+
+.rfy-historial-table th,
+.rfy-historial-table td {
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.rfy-historial-table th {
+  background-color: var(--rfy-gris-claro);
+  font-weight: 600;
+  color: var(--rfy-gris);
+}
+
+/* Acciones con iconos */
+.rfy-acciones {
+  display: flex;
+  gap: 10px;
+}
+
+.rfy-acciones img {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.rfy-acciones img:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Ajustes de columnas */
+.td-monto {
+  white-space: nowrap;
+  font-weight: 600;
+  text-align: center;
+}
+
+.td-direccion { 
+  width: 550px;    
+  overflow: hidden;
+  white-space: normal;
+}
+
+/* Colores de filas */
+.rfy-estado-rojo {
+  background-color: #C85C5C;
+  color: #fff;
+  font-weight: 500;
+}
+
+.rfy-estado-amarillo {
+  background-color: #E6B84A;
+  color: #000;
+  font-weight: 500;
+}
+
+.rfy-estado-verde {
+  background-color: var(--rfy-verde);
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Modal de notas */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-contenido {
+  background: #fff;
+  margin: 5% auto;
+  padding: 30px;
+  border-radius: 8px;
+  width: 70%;
+  max-width: 800px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  text-align: left;
+}
+
+.modal-contenido h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--rfy-azul);
+}
+
+.modal-contenido textarea {
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 120px;
+  background-color: rgba(255,255,255,0.9);
+  color: #333;
+}
+
+.modal-contenido button {
+  background-color: var(--rfy-azul);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 12px;
+  margin-right: 10px;
 }

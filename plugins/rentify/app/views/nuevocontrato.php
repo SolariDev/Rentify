@@ -124,12 +124,12 @@ defined('ABSPATH') || exit;
         <label for="precio_alquiler">Precio del alquiler</label>
         <div class="rfy-opciones">
           <label><input type="radio" name="moneda" value="UYU" required> $U</label>
-          <label><input type="radio" name="moneda" value="USD"> $USD</label>
+          <label><input type="radio" name="moneda" value="USD"> $USD</label>          
         </div>
       </div>
 
       <div class="rfy-campo">
-        <input type="number" id="precio_alquiler" name="precio_alquiler" step="1" min="0" value="0" required>
+        <input type="text" id="precio_alquiler" name="precio_alquiler" value="0" required>
       </div>
 
       <!-- Tipo de reajuste -->

@@ -67,4 +67,11 @@ add_shortcode('rfy_nuevocontrato', function () {
     include RENTIFY_PATH . 'app/views/nuevocontrato.php';
     return ob_get_clean();
 });
+
+add_shortcode('rfy_historial', function () {
+    ob_start();
+    require_once RENTIFY_PATH . 'app/controllers/historial-controller.php';
+    include RENTIFY_PATH . 'app/views/historial.php';
+    return ob_get_clean();
+});
 ?>
