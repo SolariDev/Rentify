@@ -83,6 +83,7 @@ body.rfy-noscroll {
     color: var(--rfy-azul);
     font-weight: 500;
     text-decoration: none;
+    text-align: center !important;
 }
 
 .rfy-link:hover {

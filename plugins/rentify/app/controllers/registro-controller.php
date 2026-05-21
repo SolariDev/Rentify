@@ -33,7 +33,6 @@ class RegistroController {
             return;
         }
 
-        // Hash seguro de contraseña
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
         // Inserción segura

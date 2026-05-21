@@ -84,7 +84,7 @@ $contratos = $GLOBALS['rfy_contratos'] ?? [];
           <td><?php echo date('d/m/Y', strtotime($c->fin)); ?></td>
           <td>
             <div class="rfy-acciones">
-              <a href="<?php echo site_url('/editarcontrato?id=' . $c->id); ?>" title="Editar contrato">
+              <a href="<?php echo home_url('/editarcontrato?id=' . $c->id); ?>" title="Editar contrato">
                 <img src="<?php echo esc_url(RENTIFY_URL . 'assets/img/edit.png'); ?>" alt="Editar">
               </a>
               <a href="?accion=papelera&id=<?php echo intval($c->id); ?>"
