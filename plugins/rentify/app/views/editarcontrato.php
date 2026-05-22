@@ -198,3 +198,33 @@ defined('ABSPATH') || exit;
     <div class="rfy-error">Contrato no encontrado.</div>
   <?php endif; ?>
 </div>
+
+<script>
+function calcularFechaFin() {
+  const inicio = document.getElementById('inicio').value;
+  const anios = parseInt(document.getElementById('duracion_anios').value) || 0;
+  const meses = parseInt(document.getElementById('duracion_meses').value) || 0;
+
+  if (!inicio) return;
+
+  const fechaInicio = new Date(inicio);
+  const fechaFin = new Date(fechaInicio);
+  fechaFin.setFullYear(fechaFin.getFullYear() + anios);
+  fechaFin.setMonth(fechaFin.getMonth() + meses);
+
+  const dia = fechaInicio.getDate();
+  if (fechaFin.getDate() !== dia) {
+    fechaFin.setDate(0);
+  }
+
+  const yyyy = fechaFin.getFullYear();
+  const mm = String(fechaFin.getMonth() + 1).padStart(2, '0');
+  const dd = String(fechaFin.getDate()).padStart(2, '0');
+  document.getElementById('fin').value = `${yyyy}-${mm}-${dd}`;
+}
+
+document.getElementById('inicio').addEventListener('change', calcularFechaFin);
+document.getElementById('duracion_anios').addEventListener('change', calcularFechaFin);
+document.getElementById('duracion_meses').addEventListener('change', calcularFechaFin);
+window.addEventListener('DOMContentLoaded', calcularFechaFin);
+</script>
