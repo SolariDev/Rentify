@@ -105,7 +105,9 @@ $contratos = $GLOBALS['rfy_contratos'] ?? [];
   </table>
 <?php else: ?>
   <?php if (empty($contratos)): ?>
+    <div class="rfy-papelera-vacia">
     <p>No hay contratos registrados.</p>
+    </div>
   <?php else: ?>
     <p>No se encontraron resultados para la búsqueda.</p>
   <?php endif; ?>

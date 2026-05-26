@@ -539,3 +539,41 @@
   margin-top: 12px;
   margin-right: 10px;
 }
+
+/* ========
+   Papelera
+   ======== */
+.rfy-papelera-acciones {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px 0;
+  gap: 12px;
+}
+
+.rfy-form-vaciar {
+  display: flex;
+}
+
+.rfy-btn-peligro {
+  background-color: var(--rfy-rojo);
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.rfy-btn-peligro:hover {
+  background-color: #b71c1c;
+}
+
+.rfy-papelera-vacia {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--rfy-azul);
+  font-size: 1rem;
+  font-weight: 600;
+}
+

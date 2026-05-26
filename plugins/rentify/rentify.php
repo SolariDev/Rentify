@@ -81,4 +81,11 @@ add_shortcode('rfy_editarcontrato', function () {
     include RENTIFY_PATH . 'app/views/editarcontrato.php';
     return ob_get_clean();
 });
+
+add_shortcode('rfy_papelera', function () {
+    ob_start();
+    require_once RENTIFY_PATH . 'app/controllers/papelera-controller.php';
+    include RENTIFY_PATH . 'app/views/papelera.php';
+    return ob_get_clean();
+});
 ?>
