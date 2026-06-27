@@ -15,6 +15,7 @@ plugins/*
 !.gitignore
 !docker-compose.yml
 !.env.example
+themes/
 
 # Ignorar subidas de medios y cachés
 uploads/
