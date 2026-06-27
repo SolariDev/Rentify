@@ -50,6 +50,17 @@ defined('ABSPATH') || exit;
         </div>
       </div>
 
+      <div class="rfy-doble">
+        <div class="rfy-doble-item">
+          <label for="apartamento">Apartamento</label>
+          <input type="text" id="apartamento" name="apartamento">
+        </div>
+        <div class="rfy-doble-item">
+          <label for="garage">Garage</label>
+          <input type="text" id="garage" name="garage">
+        </div>
+      </div>
+
       <div class="rfy-campo">
         <label for="barrio">Barrio / Localidad</label>
         <input type="text" id="barrio" name="barrio" required>
@@ -79,18 +90,7 @@ defined('ABSPATH') || exit;
         <option value="Tacuarembó">Tacuarembó</option>
         <option value="Treinta y Tres">Treinta y Tres</option>
         </select>
-      </div>
-
-      <div class="rfy-doble">
-        <div class="rfy-doble-item">
-          <label for="apartamento">Apartamento</label>
-          <input type="text" id="apartamento" name="apartamento">
-        </div>
-        <div class="rfy-doble-item">
-          <label for="garage">Garage</label>
-          <input type="text" id="garage" name="garage">
-        </div>
-      </div>
+      </div>      
     </fieldset>
 
     <!-- Propietario -->
@@ -124,12 +124,12 @@ defined('ABSPATH') || exit;
         <label for="precio_alquiler">Precio del alquiler</label>
         <div class="rfy-opciones">
           <label><input type="radio" name="moneda" value="UYU" required> $U</label>
-          <label><input type="radio" name="moneda" value="USD"> $USD</label>
+          <label><input type="radio" name="moneda" value="USD"> $USD</label>          
         </div>
       </div>
 
       <div class="rfy-campo">
-        <input type="number" id="precio_alquiler" name="precio_alquiler" step="1" min="0" value="0" required>
+        <input type="text" id="precio_alquiler" name="precio_alquiler" value="0" required>
       </div>
 
       <!-- Tipo de reajuste -->

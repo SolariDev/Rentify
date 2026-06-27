@@ -39,6 +39,10 @@ if ($id_usuario > 0) {
             if (!empty($link_drive_input) && !$link_drive) {
                 $mensaje = "<div class='rfy-error'>El link de Drive no es válido.</div>";
             } else {
+                $precio_input = $_POST['precio_alquiler'] ?? '0';
+                    $precio_input = str_replace('.', '', $precio_input);
+                    $precio_input = str_replace(',', '.', $precio_input);
+                    $precio_alquiler = floatval($precio_input);
                 $datos = [
                     'id_usuario'      => $id_usuario,
                     'calle'           => sanitize_text_field($_POST['calle'] ?? ''),
@@ -57,7 +61,7 @@ if ($id_usuario > 0) {
                     'inq_apellido'    => sanitize_text_field($_POST['inq_apellido'] ?? ''),
                     'inq_telefono'    => sanitize_text_field($_POST['inq_telefono'] ?? ''),
                     'inq_mail'        => sanitize_email($_POST['inq_mail'] ?? ''),
-                    'precio_alquiler' => floatval($_POST['precio_alquiler'] ?? 0),
+                    'precio_alquiler' => $precio_alquiler,
                     'moneda'          => sanitize_text_field($_POST['moneda'] ?? ''),
                     'garantia'        => sanitize_text_field($_POST['garantia'] ?? ''),
                     'duracion_anios'  => $anios,

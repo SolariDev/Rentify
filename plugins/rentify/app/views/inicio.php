@@ -6,7 +6,7 @@ defined('ABSPATH') || exit;
   
   <?php
   $logo_url = plugins_url( 'assets/img/logoct.png', __DIR__ . '/../../rentify.php' );
-  $gaia_logo_url = plugins_url( 'assets/img/gsisotipo.png', __DIR__ . '/../../rentify.php' );
+  $gs_logo_url = plugins_url( 'assets/img/logogs.png', __DIR__ . '/../../rentify.php' );
 ?>
 
   <img src="<?php echo esc_url( $logo_url ); ?>"
@@ -15,8 +15,8 @@ defined('ABSPATH') || exit;
 
   <!-- Misión institucional -->
   <p class="rfy-intro">
-    <strong>Rentify</strong> es un producto de <strong>Gaia Synapse</strong>.<br>
-    Conectando soluciones para la organización.
+    <strong>Optimiza la gestión de contratos.</strong><br>
+    <strong>Conectando soluciones para la organización.</strong>
   </p>
 
   <!-- Botones de acción -->
@@ -24,8 +24,8 @@ defined('ABSPATH') || exit;
     <a href="<?php echo home_url('/registro'); ?>" class="rfy-btn">Registro</a>
     <a href="<?php echo home_url('/ingresar'); ?>" class="rfy-btn">Iniciar sesión</a>
   </div>
-    <!-- Logo Gaia Synapse institucional -->
-  <img src="<?php echo esc_url( $gaia_logo_url ); ?>"
-       alt="Logo Gaia Synapse"
-       class="rfy-gaia-logo"/>
+  
+  <img src="<?php echo esc_url( $gs_logo_url ); ?>"
+       alt="Logo Gabriel Solari"
+       class="rfy-gs-logo"/>
 </div>
