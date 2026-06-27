@@ -5,12 +5,12 @@
     min-height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 25px;
     box-sizing: border-box;
-    padding: 15px 20px;
+    padding: 10px 20px 40px;
 }
 
 .rfy-logo {
@@ -39,12 +39,23 @@
     text-align: center;
 }
 
-/* Logo Gaia Synapse institucional */
-.rfy-gaia-logo {
+.rfy-gs-logo {
+    position: relative;
+    top: -8px;
     max-width: 140px;
-    opacity: 0.8;
+    max-height: 90px;
+    opacity: 0.9;
     display: block;
-    margin-top: 15px;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.5))
+            drop-shadow(0 18px 25px rgba(0,0,0,0.35));
+    transition: transform 0.3s ease;
+}
+
+.rfy-gs-logo:hover {
+    transform: translateY(-3px);
+    filter: drop-shadow(0 8px 15px rgba(0,0,0,0.6))
+            drop-shadow(0 20px 30px rgba(0,0,0,0.4));
 }
 
 /* ==========================

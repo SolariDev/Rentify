@@ -3,19 +3,12 @@
 
 # Incluir solo plugins y themes
 !plugins/
-!themes/
 
 # Dentro de plugins, solo Rentify
 plugins/*
 !index.php
 !plugins/rentify/
 !plugins/rentify/**
-
-# Dentro de themes, solo Rentify Child
-themes/*
-!index.php
-!themes/theme-rentify-child/
-!themes/theme-rentify-child/**
 
 # Archivos institucionales permitidos
 !README.md
@@ -28,7 +21,6 @@ uploads/
 cache/
 upgrade/
 languages/
-themes/*/languages/
 
 # Datos de Docker
 db_data/
