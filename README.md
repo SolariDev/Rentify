@@ -1,7 +1,10 @@
 # Rentify – Gestión de contratos de alquiler
 
 - Rentify es una aplicación web inicialmente desarrollada como **plugin de WordPress** pero diseñada con una arquitectura modular que permite ejecutarse en **cualquier entorno PHP**. Con el objetivo de brindar un sistema claro y centralizado de seguimiento de vencimientos de contratos, alertas y documentación asociada.  
-- El proyecto está preparado para ejecutarse en entornos reproducibles mediante **Docker Compose**, garantizando portabilidad y facilidad de despliegue. Gracias a esta estructura, Rentify puede funcionar tanto dentro de WordPress (con Hello Elementor como theme base y el theme‑rentify‑child, no incluido en este repositorio) como de manera autónoma, **desplegable en cualquier plataforma**.  
+
+- El proyecto está preparado para ejecutarse en entornos reproducibles mediante **Docker Compose**, garantizando portabilidad y facilidad de despliegue. 
+
+- Gracias a esta estructura, Rentify puede funcionar tanto dentro de WordPress (con Hello Elementor como theme base y el theme‑rentify‑child, no incluido en este repositorio) como de manera autónoma, **desplegable en cualquier plataforma**.  
 
 ---
 
@@ -17,8 +20,12 @@
 
 ## ⚙️ Aspectos técnicos
 
-- **Stack reproducible y portable**: PHP 8.2 + MySQL 8.0 en Docker Compose.  
-- **Gestión de dependencias**: Composer.  
+- **Stack reproducible y portable**: PHP 8.2 + MySQL 8.0 en Docker Compose.
+- **Gestión de dependencias**: Composer con autoload PSR-4.
+- **Arquitectura**:
+    - Todo el código fuente se mantiene en la carpeta app/.
+    - Se elimina la carpeta src/ para mantener coherencia entre entornos. 
+    - El namespace raíz es Rentify\Rentify, mapeado directamente a app/.
 - **Despliegue flexible**: WordPress con theme‑rentify‑child (instalado junto a Hello Elementor) o como aplicación autónoma en cualquier plataforma.
 
 ---

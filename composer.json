@@ -1,0 +1,23 @@
+{
+    "name": "rentify/rentify",
+    "description": "Aplicación modular para gestión de contratos de alquiler, portable en entornos PHP y con integración opcional en WordPress.",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^7.1",
+        "vlucas/phpdotenv": "^5.6",
+        "phpunit/phpunit": "^13.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Rentify\\Rentify\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Solari",
+            "email": "gabrielsolari75@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}
